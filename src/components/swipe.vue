@@ -6,7 +6,7 @@
       :slides-per-view="1"
     >
       <swiper-slide v-for="(page, index) in imgArr" :key="index">
-        <img :src="page" alt="" />
+        <img :src="page" :alt="`${index}`" />
       </swiper-slide>
     </swiper>
   </div>
@@ -22,7 +22,7 @@ const imgArr = ref<string[]>([]);
 onMounted(() => {
   for (let i = 1; i < 106; i++) {
     imgArr.value.push(
-      "/public/1723037447473-b7a58447-d809-4548-a487-120e19583bab_" + i + ".jpg"
+      "/assets/1723037447473-b7a58447-d809-4548-a487-120e19583bab_" + i + ".jpg"
     );
   }
 });
@@ -38,12 +38,6 @@ onMounted(() => {
   box-sizing: content-box;
   overflow: hidden;
 }
-/* .mySwiper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-} */
 
 img {
   object-fit: cover;
