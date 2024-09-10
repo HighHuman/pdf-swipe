@@ -2,7 +2,7 @@
   <div class="wrap">
     <swiper
       class="mySwiper"
-      :pagination="{ clickable: true }"
+      :pagination="{ clickable: true, type: 'fraction' }"
       :slides-per-view="1"
     >
       <swiper-slide v-for="(page, index) in imgArr" :key="index">
@@ -20,10 +20,8 @@ import "swiper/css";
 const imgArr = ref<string[]>([]);
 
 onMounted(() => {
-  for (let i = 1; i < 106; i++) {
-    imgArr.value.push(
-      "/assets/1723037447473-b7a58447-d809-4548-a487-120e19583bab_" + i + ".jpg"
-    );
+  for (let i = 1; i < 81; i++) {
+    imgArr.value.push("/assets/" + i + ".jpg");
   }
 });
 </script>
