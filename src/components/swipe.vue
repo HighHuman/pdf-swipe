@@ -20,8 +20,8 @@ import "swiper/css";
 const imgArr = ref<string[]>([]);
 
 onMounted(() => {
-  for (let i = 1; i < 81; i++) {
-    imgArr.value.push("/assets/" + i + ".jpg");
+  for (let i = 1; i < 232; i++) {
+    imgArr.value.push("/assets/source-" + i + ".jpg");
   }
 });
 </script>
